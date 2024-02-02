@@ -11,7 +11,7 @@
         },
         name: { //当前用户
             type: String,
-            default: ""
+            default: "22"
         }
     })
 
@@ -44,7 +44,7 @@
     <div class="m-message" style="width: 100%;">
         <div class="message__outer" ref="outerLineRef" :class="[item.name === name ? 'message-reverse' : '']">
             <div :style="{'height': emptyH}">
-                <div class="message__avatar font-11" :style="{'opacity': item.hidden ? 0 : 1, 'margin-top': spacerXTop}">{{ item.name }}</div>
+                <div class="message__avatar font-11" :style="{'opacity': item.hidden ? 0 : 1, 'margin-top': spacerXTop}">{{ item.name.slice(0, 1) }}</div>
             </div>
             <div class="message__inner" :class="[item.name === name ? 'message-reverse' : 'message-s', item.first ? 'message--first' : '', item.middle ? 'message--middle' : '', item.last ? 'message--last' : '']">
                 <div class="m-message__bubble">
