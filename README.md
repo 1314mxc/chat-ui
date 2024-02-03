@@ -30,7 +30,7 @@ list：数组。所有消息的集合。
 ```
 
 其中：
- - `hidden: true, first: true, middle: true, last: true` 这些字段可以调用ms下的util js文件中的 `setListArr` （初始化时调用，传入list，如果使用了reactive，不需要接收返回值）和 `addListItem` （新增消息时调用，传入list的某一项item，如果使用了reactive，不需要接收返回值）函数来实现。
+ - `hidden: true, first: true, middle: true, last: true` 这些字段可以调用ms下的util js文件中的 `setListArr` （初始化时调用，传入list，如果使用了reactive，不需要接收返回值）和 `addListItem` （新增消息时调用，传入list的某一项item 和 数组list，如果使用了reactive，不需要接收返回值）函数来实现。
  - status必须自行控制：比如重新发送消息时请求完成后要及时更改这一条消息的status。在vue3中，如果你使用了reactive或ref，直接修改字段即可，无需其他操作。
 
 

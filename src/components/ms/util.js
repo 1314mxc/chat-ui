@@ -12,7 +12,8 @@ export function setListArr(arr) {
     return cache_ms
 }
 
-export function addListItem(item) {
+export function addListItem(item, list) {
+    cache_ms = list;
     cache_ms.push(item)
     if (cache_ms[cache_ms.length - 1].id === item.id) {
         cache_ms[cache_ms.length - 1].hidden = true
